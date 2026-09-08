@@ -170,7 +170,7 @@ public class ReservationService {
     }
 
     private Reservation getReservation(Long id) {
-        return reservationRepository.findById(id)
+        return reservationRepository.findDetailedById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Reservation not found with id: " + id));
     }
 
